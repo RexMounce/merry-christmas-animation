@@ -8,7 +8,7 @@ A festive animation featuring neon "Merry Christmas" text, falling snowflakes, a
 - Scrollable window displaying the full source code for viewers.
 
 ## Demo
-Check it out live: [Merry Christmas Animation](https://<rexmounce>.github.io/merry-christmas-animation/)
+Check it out live: [Merry Christmas Animation](https://<RexMounce>.github.io/merry-christmas-animation/)
 
 ## How to Use
 1. Clone the repository:
