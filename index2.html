@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merry Christmas</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom, #002f4b, #dc4225);
+      color: white;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      position: relative;
+    }
+    h1 {
+      font-size: 4rem;
+      color: #00ffcc;
+      text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc, 0 0 50px #00ffcc, 0 0 75px #00ffcc;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc, 0 0 50px #00ffcc, 0 0 75px #00ffcc;
+      }
+      50% {
+        text-shadow: 0 0 15px #ff00cc, 0 0 30px #ff00cc, 0 0 45px #ff00cc, 0 0 60px #ff00cc, 0 0 75px #ff00cc, 0 0 100px #ff00cc;
+        color: #ff00cc;
+      }
+    }
+
+    .snowflake {
+      position: absolute;
+      top: -10px;
+      font-size: 1rem;
+      animation: fall linear infinite;
+      color: white;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-10px);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+
+    .code-display {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 20%;
+      background: rgba(0, 0, 0, 0.8);
+      color: #00ffcc;
+      overflow: auto;
+      padding: 10px;
+      font-family: monospace;
+      font-size: 0.9rem;
+      border-top: 2px solid #00ffcc;
+    }
+
+    .code-display pre {
+      margin: 0;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>Merry Christmas 🎄❄️</h1>
+  <div class="code-display">
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Merry Christmas&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom, #002f4b, #dc4225);
+      color: white;
+      font-family: 'Arial', sans-serif;
+    }
+    .snowflake {
+      animation: fall linear infinite;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Merry Christmas 🎄❄️&lt;/h1&gt;
+  &lt;script&gt;
+    const createSnowflake = () =&gt; {
+      const snowflake = document.createElement('div');
+      snowflake.classList.add('snowflake');
+    };
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+  </div>
+  <script>
+    const createSnowflake = () => {
+      const snowflake = document.createElement('div');
+      snowflake.classList.add('snowflake');
+      snowflake.textContent = '❄️';
+      snowflake.style.left = Math.random() * window.innerWidth + 'px';
+      snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+      snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+      document.body.appendChild(snowflake);
+
+      setTimeout(() => {
+        snowflake.remove();
+      }, 5000);
+    };
+
+    setInterval(createSnowflake, 100);
+  </script>
+</body>
+</html>
